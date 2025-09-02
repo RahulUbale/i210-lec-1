@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive HTML5 Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+            background-color: #e9ecef;
+            color: #212529;
+        }
+
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            color: #007bff;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        section {
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 900px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            color: #495057;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 20px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #007bff;
+        }
+
+        .code-block {
+            background-color: #f1f3f5;
+            padding: 18px;
+            border-left: 5px solid #007bff;
+            margin: 20px 0;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            border-radius: 8px;
+            line-height: 1.5;
+        }
+
+        .output-box {
+            background-color: #e2f2ff;
+            padding: 20px;
+            border: 1px dashed #007bff;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .note {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 5px solid #ffc107;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>A Comprehensive Guide to HTML5</h1>
+        <p>Your Blueprint for Building the Web's Structure</p>
+    </header>
+
+    <section>
+        <h2>What is HTML? The Web's Foundation</h2>
+        <p>
+            HTML, or <strong>HyperText Markup Language</strong>, is the fundamental building block of the web. It's not a programming language, but a markup language that uses a series of tags to structure the content of a webpage. Think of it as the skeleton of a website. Just as a skeleton provides the framework for a body, HTML provides the structure for a webpage. It tells your web browser what to display as a heading, what is a paragraph, where an image should go, and how everything is organized on the page.
+        </p>
+        <p>
+            A typical website is a collaborative effort between three core technologies:
+            <ul>
+                <li><strong>HTML:</strong> Provides the content and structure.</li>
+                <li><strong>CSS:</strong> Adds style, colors, and layout to make the page look good.</li>
+                <li><strong>JavaScript:</strong> Makes the page interactive and dynamic.</li>
+            </ul>
+        </p>
+    </section>
+
+    ---
+
+    <section>
+        <h2>The Evolution to HTML5</h2>
+        <p>
+            HTML has evolved over the years, and <strong>HTML5</strong> represents the latest and most significant version. It introduced new features that made web development more efficient and web pages more powerful. The biggest change was the introduction of <strong>semantic tags</strong>.
+        </p>
+        
+        <p class="section-title">What are Semantic Tags?</p>
+        <p>
+            Before HTML5, developers often used generic tags like <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> to define almost every part of a page. A `div` is a generic container, and while it works for layout, it provides no information about what the content inside it actually means. This made the code difficult for both developers and machines (like search engines and screen readers) to understand.
+        </p>
+        <p>
+            Semantic tags, on the other hand, provide clear meaning. When you use a <code>&lt;header&gt;</code> tag, you're not just creating a container; you're explicitly stating that this section is the introductory content or header of the page. This is a crucial shift that improves <strong>accessibility</strong> for users with disabilities and boosts a website's <strong>Search Engine Optimization (SEO)</strong>.
+        </p>
+        <div class="note">
+            <strong>The Key Difference:</strong>
+            <br>
+            <strong>Old HTML:</strong>
+            <code>&lt;div class="header"&gt;...&lt;/div&gt;</code> (The browser just sees a box.)
+            <br>
+            <strong>HTML5:</strong>
+            <code>&lt;header&gt;...&lt;/header&gt;</code> (The browser understands this is the header.)
+        </div>
+    </section>
+
+    ---
+
+    <section>
+        <h2>The Fundamental HTML Document Structure</h2>
+        <p>
+            Every single HTML file you create will follow a standard, basic structure. It's the skeleton's skeleton. Let's break down each line of the standard HTML blueprint.
+        </p>
+        <div class="code-block">
+            &lt;!DOCTYPE html&gt;
+            <br>&lt;html lang="en"&gt;
+            <br>&nbsp;&nbsp;&lt;head&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Page Title Goes Here&lt;/title&gt;
+            <br>&nbsp;&nbsp;&lt;/head&gt;
+            <br>&nbsp;&nbsp;&lt;body&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Visible Content Goes Here&lt;/h1&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Hello World!&lt;/p&gt;
+            <br>&nbsp;&nbsp;&lt;/body&gt;
+            <br>&lt;/html&gt;
+        </div>
+
+        <p class="section-title">Explanation of Each Part</p>
+        <ul>
+            <li><strong><code>&lt;!DOCTYPE html&gt;</code>:</strong> This isn't a tag, but a declaration. It must be the very first thing in your HTML file. It tells the browser that you're using HTML5, ensuring the page is rendered using modern standards. Without it, browsers might default to "quirks mode," which can lead to unexpected display issues.</li>
+            <li><strong><code>&lt;html&gt;</code>:</strong> The root element of your page. All other HTML content, including the <code>head</code> and <code>body</code>, must be nested inside this tag. The <code>lang="en"</code> attribute is a best practice that specifies the language of the document, which helps search engines and screen readers.</li>
+            <li><strong><code>&lt;head&gt;</code>:</strong> This section contains metadata—information about the webpage that isn't directly visible to the user. It holds the page title, links to external stylesheets (CSS) and scripts (JavaScript), and character set information.</li>
+            <li><strong><code>&lt;body&gt;</code>:</strong> This is where the magic happens! The body tag contains all the visible content of your webpage, including headings, paragraphs, images, links, and everything else a user sees and interacts with.</li>
+        </ul>
+    </section>
+
+    ---
+
+    <section>
+        <h2>Essential Tags: Headings, Sections, and Lists</h2>
+        
+        <p class="section-title">Headings: <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code></p>
+        <p>
+            Headings are used to create a hierarchical structure for your content. They're not just for making text big and bold; they define the importance of a title. <code>&lt;h1&gt;</code> is the most important heading, typically used for the main title of the page, and <code>&lt;h6&gt;</code> is the least important.
+        </p>
+        <div class="code-block">
+            &lt;h1&gt;My Hometown&lt;/h1&gt;
+            <br>&lt;h2&gt;About the Town&lt;/h2&gt;
+            <br>&lt;h3&gt;History&lt;/h3&gt;
+        </div>
+        <div class="output-box">
+            <h1>My Hometown</h1>
+            <h2>About the Town</h2>
+            <h3>History</h3>
+        </div>
+        <div class="note">
+            <strong>Common Mistakes to Avoid:</strong>
+            <ul>
+                <li><strong>Using multiple <code>&lt;h1&gt;</code> tags:</strong> A page should ideally have only one main <code>h1</code> title to provide a clear and singular topic for the page.</li>
+                <li><strong>Skipping heading levels:</strong> Always follow a logical order (e.g., from <code>h2</code> to <code>h3</code>). Don't jump from an <code>h2</code> directly to an <code>h4</code>.</li>
+            </ul>
+        </div>
+
+        <p class="section-title">The <code>&lt;section&gt;</code> Tag</p>
+        <p>
+            The <code>&lt;section&gt;</code> element is a versatile semantic tag that defines a thematic grouping of content. Think of it like a chapter in a book or a distinct topic in a report. Each section should have its own heading to clearly define its content.
+        </p>
+        <div class="code-block">
+            &lt;section&gt;
+            <br>&nbsp;&nbsp;&lt;h2&gt;Things To Do&lt;/h2&gt;
+            <br>&nbsp;&nbsp;&lt;p&gt;Discover a range of activities...&lt;/p&gt;
+            <br>&lt;/section&gt;
+        </div>
+        
+        <p class="section-title">Lists: <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code></p>
+        <p>
+            Lists are used to group related items. An <strong>unordered list</strong> uses the <code>&lt;ul&gt;</code> tag and displays a bullet point for each item. An <strong>ordered list</strong> uses the <code>&lt;ol&gt;</code> tag and displays a number for each item. Both types of lists use the <code>&lt;li&gt;</code> tag for each individual list item.
+        </p>
+        <div class="code-block">
+            &lt;ul&gt;
+            <br>&nbsp;&nbsp;&lt;li&gt;Explore the trails&lt;/li&gt;
+            <br>&nbsp;&nbsp;&lt;li&gt;Visit the museum&lt;/li&gt;
+            <br>&lt;/ul&gt;
+        </div>
+        <div class="output-box">
+            <ul>
+                <li>Explore the trails</li>
+                <li>Visit the museum</li>
+            </ul>
+        </div>
+    </section>
+
+    ---
+
+    <section>
+        <h2>Working with Tables and Images</h2>
+
+        <p class="section-title">The <code>&lt;table&gt;</code> Tag and its Children</p>
+        <p>
+            Tables are used to display data in a structured way using rows and columns. They're perfect for photo galleries, data sets, or any content that benefits from a grid layout.
+        </p>
+        <p>
+            A table is composed of several key elements:
+            <ul>
+                <li><strong><code>&lt;table&gt;</code>:</strong> The main container for the table.</li>
+                <li><strong><code>&lt;caption&gt;</code>:</strong> A title for the table, describing its content.</li>
+                <li><strong><code>&lt;tr&gt;</code>:</strong> Defines a table row.</li>
+                <li><strong><code>&lt;th&gt;</code>:</strong> Defines a table header cell.</li>
+                <li><strong><code>&lt;td&gt;</code>:</strong> Defines a standard table data cell.</li>
+            </ul>
+        </p>
+        <div class="code-block">
+            &lt;table border="1"&gt;
+            <br>&nbsp;&nbsp;&lt;caption&gt;Vacation Photos&lt;/caption&gt;
+            <br>&nbsp;&nbsp;&lt;tr&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Photo&lt;/th&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Date&lt;/th&gt;
+            <br>&nbsp;&nbsp;&lt;/tr&gt;
+            <br>&nbsp;&nbsp;&lt;tr&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;A nice beach&lt;/td&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;July 2023&lt;/td&gt;
+            <br>&nbsp;&nbsp;&lt;/tr&gt;
+            <br>&lt;/table&gt;
+        </div>
+        <div class="output-box">
+            <table border="1" style="width:100%; border-collapse: collapse;">
+                <caption>Vacation Photos</caption>
+                <tr>
+                    <th style="padding: 8px;">Photo</th>
+                    <th style="padding: 8px;">Date</th>
+                </tr>
+                <tr>
+                    <td style="padding: 8px;">A nice beach</td>
+                    <td style="padding: 8px;">July 2023</td>
+                </tr>
+            </table>
+        </div>
+
+        <p class="section-title">Adding Images with <code>&lt;img&gt;</code></p>
+        <p>
+            The <code>&lt;img&gt;</code> tag is used to embed images on your webpage. It's a self-closing tag, meaning it doesn't need a closing <code>&lt;/img&gt;</code> tag. The two most important attributes are <code>src</code> and <code>alt</code>.
+        </p>
+        <ul>
+            <li><strong><code>src</code>:</strong> This attribute provides the path to the image file.</li>
+            <li><strong><code>alt</code>:</strong> The <strong>alternative text</strong> is crucial for accessibility. It provides a description of the image for screen readers and is displayed if the image fails to load. <strong>Never forget to include alt text!</strong></li>
+        </ul>
+        <div class="code-block">
+            &lt;img src="path/to/my/image.jpg" alt="A description of the image" width="300"&gt;
+        </div>
+        <div class="output-box">
+            <p>Example of an image placeholder:</p>
+            <img src="https://via.placeholder.com/300x150" alt="A description of the image" style="display: block;">
+            <br>
+            <br><p>Example of a real image:</p> 
+            <img src="https://picsum.photos/300/200" alt="A description of the image" style="display: block;">
+            <br>
+            <br><p>Example of a local image:</p>
+            <img src="./rouen-cathedral-9787080_1280.jpg" height="300px" alt="A description of the image" style="display: block;">
+
+        </div>
+    </section>
+
+    ---
+
+    <footer>
+        <p>&copy; 2025 HTML Guide. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
